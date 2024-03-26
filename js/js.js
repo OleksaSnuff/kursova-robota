@@ -1,3 +1,12 @@
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+
+iziToast.success({
+  message: `✅ Fulfilled promise in ${delay}ms`,
+  position: "topRight",
+  close: false,
+});
+
 let score = 0;
 function showSectionOnClick(buttonId, sectionId) {
   document.getElementById(buttonId).addEventListener("click", function () {
@@ -6,6 +15,14 @@ function showSectionOnClick(buttonId, sectionId) {
       top: 500,
       behavior: "smooth",
     });
+
+    // var htmlCode = "<button>1331</button>";
+
+    // // Створити нову вкладку
+    // var newTab = window.open();
+
+    // // Записати HTML-код у нову вкладку
+    // newTab.document.write(htmlCode);
   });
 }
 showSectionOnClick("zero-butt", "first-section");
@@ -20,6 +37,13 @@ document.getElementById("module-butt").addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+// function congracScore() {
+//   iziToast.show({
+//     title: "Hey",
+//     message: "What would you like to add?",
+//   });
+// }
 
 let questions1 = [
   {
@@ -78,16 +102,19 @@ function checkAnswers(container, inputClass) {
   for (let input of inputs) {
     if (input.value === "") {
       input.classList.add("incorrect");
+      input.value = input.dataset.right;
       input.readOnly = true;
-    } else if (input.value.toLowerCase() == input.dataset.right) {
+    } else if (input.value.toLowerCase().trim() == input.dataset.right) {
       input.classList.add("correct");
       score++;
       input.readOnly = true;
     } else {
       input.classList.add("incorrect");
+      input.value = input.dataset.right;
       input.readOnly = true;
     }
   }
+  congracScore();
 }
 
 // Використання функції для першого блоку

@@ -17,15 +17,32 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <div class="header-wrap conatainer">
-        <a href="" class="header_logo"
+        <a href="./index.html" class="header_logo"
           >Lern<span class="header_logo_it">IT</span></a
         >
-        <div class="header_score-wrap"></div>
+        <nav class="header-navigation">
+          <ul class="header-navigation-list">
+            <li class="header-navigation-list-item">
+              <a href="./chapter1.html" class="header-navigation-link"
+                >Тема 1</a
+              >
+            </li>
+            <li class="header-navigation-list-item">
+              <a href="" class="header-navigation-link">Тема 2</a>
+            </li>
+            <li class="header-navigation-list-item">
+              <a href="./chapter3.html" class="header-navigation-link"
+                >Тема 3</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main>
@@ -49,12 +66,40 @@
           <button type="button" class="main-button" id="zero-butt">
             Починаймо!
           </button>
+          <!-- <p
+            class="codepen"
+            data-height="300"
+            data-default-tab="html,result"
+            data-slug-hash="PowZaNY"
+            data-user="Valgo"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Valgo/pen/PowZaNY"> Text Morph</a> by
+              Valgo (<a href="https://codepen.io/Valgo">@Valgo</a>) on
+              <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script> -->
         </div>
       </section>
       <section class="first-section" id="section-1">
         <div class="conatainer visually-hidden" id="first-section">
           <div class="section-wrap">
-            <h2 class="section-header">Section #1 Змінні</h2>
+            <h2 class="section-header">Змінні</h2>
             <p>
               JavaScript (або скорочено JS) — це повноцінна динамічна мова
               програмування, яка застосовується до HTML документу та може
@@ -266,7 +311,7 @@
                     >
                     <label class="quiz-label"
                       ><input type="radio" name="q1" value="true" />
-                      Конкантинацію</label
+                      Конкатенацію</label
                     >
                   </div>
 
@@ -321,7 +366,7 @@
       <section class="second-section" id="section-2">
         <div class="container visually-hidden" id="second-section">
           <div class="section-wrap">
-            <h2 class="section-header">Section #2 Умовне розгалуження</h2>
+            <h2 class="section-header">Умовне розгалуження</h2>
             <img src="./img/if-else.jpg" alt="if else operators" class="img" />
             <p>
               <b>Умови</b> <br />
@@ -558,7 +603,7 @@
               Перевірити
             </button>
             <button type="button" class="main-button" id="module-butt">
-              Почати модальний контроль
+              Почати модульний контроль
             </button>
           </div>
         </div>
@@ -584,7 +629,6 @@
         </div>
       </section>
     </main>
-    <footer></footer>
     <div class="backdrop" id="modal-section">
       <div class="modal">
         <button type="button" class="modal-btn" id="close-modal">
@@ -594,11 +638,16 @@
         </button>
         <p class="modal-text">Вітаю ти завершив тест!</p>
         <p id="score" class="score">Оцінка:12 з 29</p>
-        <button type="button" class="main-button" onclick="reload()">
+        <button
+          type="button"
+          class="main-button restart-btn"
+          onclick="reload()"
+        >
           Почати спочатку
         </button>
       </div>
     </div>
+
     <script src="./js/js.js" defer></script>
   </body>
 </html>
