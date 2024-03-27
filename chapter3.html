@@ -34,7 +34,7 @@
               >
             </li>
             <li class="header-navigation-list-item">
-              <a href="" class="header-navigation-link">Тема 2</a>
+              <a href="./index.html" class="header-navigation-link">Тема 2</a>
             </li>
             <li class="header-navigation-list-item">
               <a href="" class="header-navigation-link">Тема 3</a>
@@ -353,7 +353,242 @@
               Події: Функції, Властивості, та Ефекти
             </h2>
             <h2 class="block-header">Функції та властивості подій.</h2>
-            <h2 class="block-header">Спеціальні ефекти?</h2>
+            <p>
+              У jQuery події представлені функціями та властивостями, які можна
+              використовувати для обробки різноманітних дій користувача на
+              веб-сторінці. Ось декілька основних функцій та властивостей подій:
+            </p>
+            <img src="./img/separator.jpeg" alt="" class="img" />
+            <ol>
+              <li>
+                <p>
+                  <b>.click()</b>: Ця функція встановлює обробник подій для
+                  події "click" на вибраних елементах. Приклад:
+                </p>
+                <p class="code">
+                  $('button').click(function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;alert('Клікнули на кнопці!');<br />
+                  });<br />
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>.dblclick()</b>: Ця функція встановлює обробник подій для
+                  події "double click" на вибраних елементах. Приклад:
+                </p>
+                <p class="code">
+                  $('button').dblclick(function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;alert('Подвійний клік на кнопці!');<br />
+                  });<br />
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>.hover()</b>: Ця функція встановлює обробники подій для
+                  подій "mouseenter" та "mouseleave" на вибраних елементах.
+                  Приклад:
+                </p>
+                <p class="code">
+                  $('button').hover(<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('Мишка
+                  ввійшла на кнопку!');<br />
+                  },<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('Мишка
+                  вийшла з кнопки!');<br />
+                  }<br />
+                  );<br />
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>.focus()</b> та <b>.blur()</b>: Ці функції встановлюють
+                  обробники подій для подій "focus" та "blur" на вибраних
+                  елементах. Приклад:
+                </p>
+                <p class="code">
+                  $('input').focus(function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;alert('Введення фокуса на поле
+                  вводу!');<br />
+                  });<br /><br />
+                  $('input').blur(function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;alert('Поле вводу втратило
+                  фокус!');<br />
+                  });<br />
+                </p>
+              </li>
+            </ol>
+            <img src="./img/functjquery.png" alt="" class="img" />
+            <p>
+              Функція <code>on()</code> в jQuery є дуже потужним інструментом
+              для обробки подій, і вона рекомендується використовувати тоді,
+              коли вам потрібно працювати з декількома подіями або коли елементи
+              додаються динамічно. Ось деякі ситуації, коли ви можете
+              використовувати функцію <code>on()</code>:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <b>Обробка декількох подій:</b><br />
+                  Якщо вам потрібно встановити обробники для кількох подій
+                  одночасно, ви можете використати <code>on()</code>. Наприклад:
+                </p>
+                <p class="code">
+                  $('button').on({<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;click: function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('Клікнули
+                  на кнопці!');<br />
+                  },<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;mouseenter: function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).addClass('hovered');<br />
+                  },<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;mouseleave: function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).removeClass('hovered');<br />
+                  }<br />
+                  });<br />
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Динамічно додані елементи:</b><br />
+                  Якщо ви додаєте елементи на сторінку динамічно через
+                  JavaScript або AJAX, використання <code>on()</code> дозволяє
+                  вам легко прикріплювати обробники подій до цих елементів.
+                  Наприклад:
+                </p>
+                <p class="code">
+                  $(document).on('click', 'button.dynamic', function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;alert('Клікнули на динамічну
+                  кнопку!');<br />
+                  });<br />
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Делегування подій:</b><br />
+                  Функція <code>on()</code> також дозволяє вам делегувати
+                  обробку подій вище по DOM-дереву. Це дозволяє оптимізувати
+                  роботу з подіями для великих наборів елементів. Наприклад:
+                </p>
+                <p class="code">
+                  $('#parentElement').on('click', 'button', function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;alert('Клікнули на кнопці, яка
+                  знаходиться всередині #parentElement!');<br />
+                  });<br />
+                </p>
+              </li>
+            </ol>
+
+            <p>
+              Узагальнюючи, функція <code>on()</code> є корисною тоді, коли вам
+              потрібно працювати з багатьма подіями, коли елементи додаються
+              динамічно або коли вам потрібно делегувати обробку подій.
+            </p>
+            <h2 class="block-header">Спеціальні ефекти</h2>
+            <p>
+              В jQuery існує багато вбудованих функцій для створення анімацій та
+              спецефектів, що дозволяють створювати візуальні ефекти на
+              веб-сторінці. Ось декілька з них:
+            </p>
+
+            <ul>
+              <li>
+                <p>
+                  <b>Анімація елементів:</b><br />
+                  Використовуйте методи <code>.animate()</code> для створення
+                  анімаційних ефектів, таких як переміщення, зміна розміру,
+                  зміна прозорості тощо. Наприклад:
+                </p>
+                <p class="code">
+                  $('#myElement').animate({<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;left: '250px',<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;opacity: '0.5',<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;height: '150px',<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;width: '150px'<br />
+                  }, 1000);<br />
+                </p>
+                <p>
+                  Цей код анімує елемент #myElement, зсуваючи його вправо на
+                  250px, змінюючи прозорість на 0.5, а також змінюючи його
+                  розмір на 150px x 150px протягом 1 секунди (1000 мс).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Показ та приховування:</b><br />
+                  Методи <code>.show()</code>, <code>.hide()</code> та
+                  <code>.toggle()</code> дозволяють показувати, приховувати або
+                  перемикати видимість елементів з плавними анімаційними
+                  ефектами:
+                </p>
+                <p class="code">
+                  $('#myElement').hide(1000); // Приховати з анімацією протягом
+                  1 секунди
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Зміна прозорості:</b><br />
+                  Використовуйте методи <code>.fadeIn()</code>,
+                  <code>.fadeOut()</code> та <code>.fadeToggle()</code> для
+                  створення ефектів зміни прозорості елементів:
+                </p>
+                <p class="code">
+                  $('#myElement').fadeIn(1000); // З'явлення з анімацією
+                  протягом 1 секунди
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Підсвічування:</b><br />
+                  Методи <code>.slideDown()</code>, <code>.slideUp()</code> та
+                  <code>.slideToggle()</code> дозволяють створювати ефекти
+                  згортання або розгортання елементів з анімаційним ефектом:
+                </p>
+                <p class="code">
+                  $('#myElement').slideDown(1000); // Розгортання з анімацією
+                  протягом 1 секунди
+                </p>
+              </li>
+            </ul>
+
+            <p>
+              Анімація колірних властивостей:<br />
+              Для анімації зміни кольору використовуйте плагін jQuery Color або
+              вбудовану підтримку кольорів у методі <code>.animate()</code>.
+            </p>
+            <p>
+              Ефект елементу easing використовується для створення більш плавних
+              та природних анімаційних переходів між станами. Він дозволяє
+              задавати анімаційні криві, які контролюють швидкість зміни значень
+              властивостей елементів під час анімації.
+            </p>
+
+            <p>
+              У jQuery easing може бути визначений як параметр методу
+              .animate(). Ось приклад ефекту easing:
+            </p>
+
+            <p>
+              linear: Лінійний ефект, рухається з однаковою швидкістю:<br />
+            </p>
+            <p class="code">
+              $('#myElement').animate({<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;left: '250px'<br />
+              }, 1000, 'linear');
+            </p>
+            <p>
+              Ось посилання на шпаргалку з великою кількістю перетікань:
+              <a
+                href="https://easings.net/uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ТИЦЬ</a
+              >
+            </p>
+            <img src="./img/easy.jpg" alt="" class="img" />
+
             <button type="button" class="main-button" id="first-butt">
               До наступного блоку
             </button>
@@ -361,6 +596,6 @@
         </div>
       </section>
     </main>
-    <script src="./js/js.js"></script>
+    <script src="./js/js.js" type="module"></script>
   </body>
 </html>

@@ -2,9 +2,8 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 iziToast.success({
-  message: `✅ Fulfilled promise in ${delay}ms`,
-  position: "topRight",
-  close: false,
+  title: "Hey",
+  message: "What would you like to add?",
 });
 
 let score = 0;
