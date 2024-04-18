@@ -11,7 +11,7 @@ iziToast.success({
   message: "Я тут, щоб тобі допомагати)",
 });
 
-//===========копіювання
+//===========копіювання----
 const codeElements = document.querySelectorAll(".code");
 codeElements.forEach(function (element) {
   element.addEventListener("click", function () {
