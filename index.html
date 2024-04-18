@@ -16,9 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <title>Тема 1</title>
     <link rel="stylesheet" href="./css/styles.css" />
-
-    <title>Document</title>
   </head>
   <body>
     <header class="header">
@@ -29,12 +28,12 @@
         <nav class="header-navigation">
           <ul class="header-navigation-list">
             <li class="header-navigation-list-item">
-              <a href="./chapter1.html" class="header-navigation-link"
-                >Тема 1</a
-              >
+              <a href="./index.html" class="header-navigation-link">Тема 1</a>
             </li>
             <li class="header-navigation-list-item">
-              <a href="./index.html" class="header-navigation-link">Тема 2</a>
+              <a href="./chapter2.html" class="header-navigation-link"
+                >Тема 2</a
+              >
             </li>
             <li class="header-navigation-list-item">
               <a href="./chapter3.html" class="header-navigation-link"
@@ -50,60 +49,52 @@
         <div class="zero-chapter-wrap conatainer">
           <div class="section-wrap">
             <h1 class="chapter-header">
-              Саме тут почнеться вивчення основ JavaScript!
+              Тема 1. Динамічна, об'єктно-орієнтована мова програмування
+              JavaScript
             </h1>
-            <p>Ласкаво просимо до вивчення основ JavaScript!</p>
-            <p>
-              Тут ти знайдеш усе необхідне для твого успішного поглиблення в
-              програмуванні. Кожна тема супроводжується невеликим тестом, що
-              допоможе закріпити твої знання.<br />
-              Не бійся помилок — це нормально. Вони тобі лише допоможуть стати
-              кращим. Вивчати щось нове це завжди добре. Це тівй ключ до
-              успіху!<br />
-              Бажаємо тобі успіхів у вивченні JavaScript!
-            </p>
+            <p>У цій темі ми будемо розглядати:<br /></p>
+            <ol class="theme-list">
+              <li>
+                <p>Поняття про JavaScript<br /></p>
+              </li>
+              <li>
+                <p>
+                  Технологія створення вебсторінок за допомогою HTML та CSS<br />
+                </p>
+              </li>
+              <li>
+                <p>
+                  Методика використання JavaScript при створенні вебсторінок
+                </p>
+              </li>
+              <li>
+                <p>
+                  Технологія застосування Java-скриптів на вебсторінках<br />
+                </p>
+              </li>
+              <li>
+                <p>Створення контенту сторінок з використанням Java-скриптів</p>
+              </li>
+            </ol>
           </div>
-          <button type="button" class="main-button" id="zero-butt">
+          <button
+            type="button"
+            class="main-button"
+            id="zero-butt"
+            onclick="showSection( 'section-1')"
+          >
             Починаймо!
           </button>
-          <!-- <p
-            class="codepen"
-            data-height="300"
-            data-default-tab="html,result"
-            data-slug-hash="PowZaNY"
-            data-user="Valgo"
-            style="
-              height: 300px;
-              box-sizing: border-box;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border: 2px solid;
-              margin: 1em 0;
-              padding: 1em;
-            "
-          >
-            <span
-              >See the Pen
-              <a href="https://codepen.io/Valgo/pen/PowZaNY"> Text Morph</a> by
-              Valgo (<a href="https://codepen.io/Valgo">@Valgo</a>) on
-              <a href="https://codepen.io">CodePen</a>.</span
-            >
-          </p>
-          <script
-            async
-            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
-          ></script> -->
         </div>
       </section>
-      <section class="first-section" id="section-1">
-        <div class="conatainer visually-hidden" id="first-section">
+      <section class="first-section visually-hidden" id="section-1">
+        <div class="conatainer" id="first-section">
           <div class="section-wrap">
-            <h2 class="section-header">Змінні</h2>
+            <h2 class="section-header">Поняття про JavaScript</h2>
             <p>
               JavaScript (або скорочено JS) — це повноцінна динамічна мова
               програмування, яка застосовується до HTML документу та може
-              забезпечити динамічну взаємодію на веб-сайтах. Її розробив Брендан
+              забезпечити динамічну взаємодію на вебсайтах. Її розробив Брендан
               Айк, співзасновник проекту Mozilla, Mozilla Foundation та Mozilla
               Corporation.
             </p>
@@ -114,540 +105,657 @@
               графіку, повномасштабні додатки з базами даних та багато іншого!
             </p>
             <p>
+              Ця мова програмування широко використовується у веброзробці як на
+              стороні клієнта, так і на стороні сервера. JavaScript може бути
+              використаний для створення повноцінних вебдодатків, включаючи
+              інтерактивні вебсайти, односторінкові додатки (SPA), вебігри та
+              мобільні додатки.
+            </p>
+            <p>
               JavaScript сам по собі досить компактний, і при цьому дуже
               гнучкий. Розробниками написано велику кількість інструментів
               поверх основної мови JavaScript, які розблоковують велику
               кількість додаткових функцій з дуже невеликими зусиллями.
             </p>
-            <h2 class="block-header">Змінні</h2>
+            <h2 class="block-header">Перевірка знань</h2>
+            <div class="quiz-wrap" id="test1_1"></div>
+
+            <div class="twoButtonsWrap">
+              <button id="button1_1" class="main-button check-button">
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test1_1')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <h2 class="block-header">
+              Технологія створення вебсторінок за допомогою HTML та CSS
+            </h2>
             <p>
-              Змінні — це контейнери, всередині яких ви можете зберігати
-              значення. Ви розпочинаєте з того, що оголошуєте змінну за
-              допомогою ключового слова var (не рекомендується, продовжуйте
-              читати, щоб отримати пояснення) або let, за яким слідує будь-яке
-              ім'я, яким ви захочете її назвати:
+              Технологія створення вебсторінок за допомогою HTML та CSS полягає
+              в поєднанні двох основних мов - HTML (HyperText Markup Language) і
+              CSS (Cascading Style Sheets), які спільно визначають вигляд і
+              структуру вебсторінок. Взаємодія HTML і CSS полягає в тому, що
+              HTML визначає структуру та логіку сторінки, в той час як CSS
+              відповідає за її вигляд та оформлення. Це дозволяє розробникам
+              створювати вебсторінки з чіткою структурою, а також з атрактивним
+              та привабливим дизайном.
             </p>
-            <p class="code">let myVariable;</p>
+
             <p>
-              Тепер можна помістити в неї дані (іншими словами, визначити
-              змінну), використовуючи оператор присвоєння = :
+              Для кращого розуміння можна навести анологію в якій HTML буде
+              "скелет", а CSS "шкіра". HTML можна розглядати як "скелет"
+              вебсторінки - він визначає структуру та елементи сторінки, такі як
+              заголовки, параграфи, списки, таблиці тощо. Ці елементи утворюють
+              основу сторінки і визначають її основну структуру.<br />
+              CSS, з іншого боку, можна розглядати як "шкіра" - він визначає
+              зовнішній вигляд і стиль сторінки. За допомогою CSS можна
+              змінювати кольори тексту, фону, встановлювати розміри та форму
+              елементів, задавати відстані між елементами, розташування тощо.
+            </p>
+            <p>
+              Отже, HTML надає структуру і контент сторінки, тоді як CSS надає
+              стиль та оформлення. Підключаючи CSS до HTML, ви можите створити
+              привабливий та естетичний дизайн для вашого контенту.
+            </p>
+            <img
+              src="./img/HTML-and-CSS.png"
+              alt="skin and skeleton"
+              class="img"
+            />
+            <p>
+              Розглянемо детальніше, де і як HTML та CSS використовуються у
+              веброзробці:
+            </p>
+            <p>
+              HTML (HyperText Markup Language) використовується для створення
+              структури вебсторінок. Основні використовуються випадки:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <b>Відображення тексту та зображень:</b><br />
+                  Елементи HTML, такі як &lt;p&gt; для параграфів тексту та
+                  &lt;img&gt; для зображень, дозволяють розміщувати контент на
+                  веб сторінці. Приклад:
+                </p>
+                <p class="code">
+                  &lt;p&gt;Це параграф з текстом.&lt;/p&gt;<br />
+                  &lt;img src="image.jpg" alt="Зображення"&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Створення заголовків і підзаголовків:</b> <br />
+                  Елементи &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt; і т. д.
+                  використовуються для визначення рівнів заголовків на сторінці.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  &lt;h1&gt;Головний Заголовок&lt;/h1&gt;<br />
+                  &lt;h2&gt;Підзаголовок&lt;/h2&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Створення списків:</b><br />
+                  Елементи &lt;ul&gt; (невпорядкований список) та &lt;ol&gt;
+                  (впорядкований список) використовуються для створення списків
+                  елементів.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  &lt;ul&gt;<br />
+                  &lt;li&gt; <br />
+                  Елемент списку 1<br />
+                  &lt;/li&gt;<br />
+                  &lt;li&gt;<br />Елемент списку 2<br />&lt;/li&gt;<br />
+                  &lt;/ul&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Створення посилань:</b><br />
+                  Елемент &lt;a&gt; використовується для створення посилань на
+                  інші вебсторінки або ресурси.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  &lt;a href="https://www.example.com"&gt;Посилання на іншу
+                  сторінку&lt;/a&gt;
+                </p>
+              </li>
+            </ol>
+            <img src="./img/css.jpg" alt="skin and skeleton" class="img" />
+            <p>
+              CSS (Cascading Style Sheets) використовується для оформлення
+              стилів вебсторінок. Основні використовуються випадки:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <b>Зміна кольорів та фонів:</b><br />
+                  CSS дозволяє визначати кольори тексту, фону елементів і фонові
+                  зображення.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  body { <br />color: #333; /* Колір тексту */<br />
+                  background-color: #f0f0f0; /* Колір фону */<br />
+                  }
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Форматування шрифтів:</b><br />
+                  CSS дозволяє вибирати різні шрифти, розміри шрифтів та
+                  стилізувати текст.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  p {<br />
+                  font-family: Arial, sans-serif; /* Вибір шрифта */<br />
+                  font-size: 16px; /* Розмір шрифта */<br />
+                  font-weight: bold; /* Товщина шрифта */ <br />}
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Розміщення та розташування елементів:</b><br />
+                  CSS дозволяє керувати розташуванням елементів на сторінці,
+                  встановлюючи відступи, позиціонування та розміри.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  header {<br />
+                  text-align: center; /* Вирівнювання тексту по центру */<br />
+                  padding: 20px; /* Відступи від країв */ <br />}
+                </p>
+              </li>
+            </ol>
+            <p>
+              Класи в CSS - це іменовані набори стилів, які можуть бути
+              застосовані до одного або декількох елементів HTML. Використовуючи
+              класи, ви можете створити специфічні стилі, які можна легко
+              застосувати до будь-якої кількості елементів на сторінці.
+            </p>
+            <p>
+              Класи визначаються у CSS за допомогою селектора класу, який
+              починається з крапки (.), за якою слідує ім'я класу. Наприклад,
+              якщо ви хочете визначити стилі для класу з ім'ям "button", то ви
+              можете зробити це так:
+            </p>
+            <p class="code">.button { background-color: #007bff;}</p>
+            <p>
+              Це визначає стилі для елементів, які мають клас "button". Потім ви
+              можете застосувати цей клас до будь-якого елемента HTML, вказавши
+              його атрибут класу. Наприклад:
             </p>
             <p class="code">
-              myVariable = "Bob";<br />або ж написати код компактніше <br />var
-              myVariable = "Bob";
+              &lt;button class="button"&gt;Натисніть на мене&lt;/button&gt;
             </p>
-            <p>
-              Після визначення значення змінної ви можете змінити його пізніше:
-            </p>
-            <p class="code">myVariable = 'Steve';</p>
-            <p>Тепер змінна myVariable містить таке значення 'Steve'</p>
-            <div id="test" class="quiz-wrap"></div>
+            <h2 class="block-header">Перевірка знань</h2>
+            <form class="quiz-form" id="quizForm1_1">
+              <fieldset class="quiz-fieldset" id="fieldset1_1">
+                <div class="quiz-wrap-set">
+                  <p>1. Як HTML визначає структуру та логіку сторінки?</p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="true" checked /> a)
+                    Структуру</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="True" /> b)
+                    Стиль</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="True" /> c)
+                    Вигляд</label
+                  >
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>2. Що визначає CSS у веброзробці?</p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="True" checked /> a)
+                    Структуру</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="true" /> b)
+                    Логіку</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="True" /> c)
+                    Стиль</label
+                  >
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>3. Як використовуються класи в CSS?</p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="True" checked /> a)
+                    Для зміни кольорів</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="True" /> b) Для
+                    визначення розміщення елементів</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="true" /> c) Для
+                    застосування специфічних стилів</label
+                  >
+                </div>
+              </fieldset>
+            </form>
+
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm1_1')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset1_1')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <!-- <div id="test" class="quiz-wrap"></div>
             <button type="submit" id="button" class="main-button check-button">
               Перевірити
-            </button>
-            <h2 class="block-header">Типи даних</h2>
-            <img
-              src="./img/1_l_ZDRMLFUVaIO38p9Qkzvw.jpg"
-              alt="types of data"
-              class="img"
-            />
-            <p>
-              <b>String</b><br />Послідовність тексту, відома як рядок. Щоб
-              вказати, що це значення є рядком, ви повинні обгорнути його
-              лапками.
-            </p>
-            <p class="code">var myVariable = 'Bob';</p>
-            <p>
-              <b>Number</b><br />
-              Числа. Числа не мають лапок навколо них.
-            </p>
-            <p class="code">var myVariable = 10;</p>
-            <p>
-              <b>Boolean</b><br />
-              Значення True (Правда)/False (Брехня). Слова true і false — це
-              спеціальні ключові слова в JS і не потребують лапок.
-            </p>
-            <p class="code">var myVariable = true;</p>
-            <p>
-              <b>Array</b><br />
-              Масив, який дозволяє зберігати кілька значень в одному посиланні.
-            </p>
-            <p class="code">var myVariable = [1, 'Bob', 'Steve', 10];</p>
-            <p>
-              Звертатися до кожного елементу масиву можна так: myVariable[0],
-              myVariable[1], і так далі.
-            </p>
-            <p>
-              <b>Object</b><br />
-              В принципі, все що завгодно. Все в JavaScript є об'єктом і може
-              бути збережено у змінній. Майте це на увазі, поки ви вивчаєте.
-            </p>
-            <p class="code">var myVariable = document.querySelector('h1');</p>
-            <p>Все з раніше наведених прикладів.</p>
-            <h2 class="block-header">Оператори в мові JavaScript</h2>
-            <img
-              src="./img/javascript-operators.png"
-              alt="javascript operators"
-              class="img"
-            />
-            <p>
-              <b>Додавання(конкантинація)</b><br />Використовується для
-              додавання двох чисел або рядків<br />
-              Символ: +
-            </p>
-            <p class="code">
-              6 + 9;<br />
-              "Hello " + "world!";
-            </p>
-            <p>
-              <b>Віднімання, множення, ділення</b><br />Використовується як і в
-              класичній математиці
-              <br />
-              Символи: -,*,/
-            </p>
-            <p class="code">
-              6 * 9;<br />
-              6 - 9;<br />
-              6 / 9;
-            </p>
-            <p>
-              <b>Присвоєння</b><br />Використовується для присвоєння змінній
-              значення
-              <br />
-              Символ: =
-            </p>
-            <p class="code">var myVariable = "Bob";</p>
-            <p>
-              <b>== (оператор нестрогого рівняння):</b> порівнює значення без
-              звертання до типів даних. JavaScript може провести автоматичне
-              приведення типів, якщо типи операндів відрізняються.
-              <br />Приклад:
-            </p>
-            <p class="code">
-              5 == "5" // true, тому що JavaScript автоматично перетворює рядок
-              в число для порівняння
-            </p>
-            <p>
-              <b>Дорівнює(оператор строгого рівняння)</b><br />Використовується
-              для перевірки двох значень на рівність. Повертає
-              true/false(Boolean).Воно не проводить автоматичне приведення
-              типів, і обидва операнди повинні бути одного і того ж типу для
-              отримання true.
-              <br />
-              Символ: ===
-            </p>
-            <p class="code">
-              var myVariable = 3; <br />myVariable === 4;<br />false;
-            </p>
-            <h2 class="block-header">Логічні оператори</h2>
-            <img
-              src="./img/JavaScript-Logical-Operators.webp"
-              alt="logical operators"
-              class="img"
-            />
-            <p>
-              <b>Заперечення</b><br />Повертає логічно протилежне значення, яке
-              йому передує; перетворює true в false і таке інше. Коли
-              використовується разом з оператором рівності, оператор заперечення
-              перевіряє, чи два значення не є рівними.
-              <br />
-              Символ: !, ==!
-            </p>
-            <p>
-              Основний вираз - true, але порівняння повертає false, оскільки ми
-              його заперечуємо:
-            </p>
-            <p class="code">
-              var myVariable = 3;<br />
-              !(myVariable === 3);<br />false
-            </p>
-            <p>
-              Тут ми перевіряємо "myVariable НЕ рівно 3". Це повертає false,
-              оскільки myVariable рівне 3.
-            </p>
-            <p class="code">
-              var myVariable = 3;<br />
-              myVariable !== 3;<br />
-              false
-            </p>
-            <p>
-              <b>Примітка:</b><br />
-              Змішування типів даних може призвести до деяких неочікуваних
-              результатів при виконанні обчислень, тому будьте обережні,
-              правильно посилаючись на ваші змінні, щоб отримувати очікувані
-              результати. Наприклад, введіть "35" + "25" у вашу консоль. Чому ви
-              не отримали результат, який очікували? Тому що лапки перетворили
-              числа на рядки, отже, вас насправді чекає конкатенація рядків, а
-              не додавання чисел. Якщо ви введете 35 + 25, то отримаєте
-              правильний результат.
-            </p>
-
-            <p>
-              <b>Логічний оператор "або"</b><br />в JavaScript представлений
-              символом ||. Використовується для виразів, що повертають true,
-              якщо хоча б один із умов вираження є true.
-            </p>
-            <p class="code">
-              "var result = (5 > 3) || (10 &lt; 5);" <br />true
-            </p>
-            <p>
-              <b>Логічний оператор "і"</b><br />в JavaScript представлений
-              символом &&. Використовується для виразів, що повертають true,
-              лише якщо обидві умови вираження є true.
-            </p>
-            <p class="code">var result = (5 > 3) && (10 &lt; 5); <br />false</p>
-            <div class="test-wrap">
-              <form class="quiz-form" id="quizForm">
-                <fieldset class="quiz-fieldset">
-                  <div class="quiz-wrap-set">
-                    <p>1. Що означає символ "+" в JS?</p>
-                    <label class="quiz-label"
-                      ><input type="radio" name="q1" value="True" checked /> Не
-                      має призначення</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q1" value="True" />
-                      Порівняння</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q1" value="true" />
-                      Конкатенацію</label
-                    >
-                  </div>
-
-                  <div class="quiz-wrap-set">
-                    <p>2. Тип даних, що має тільки значення true і false?</p>
-                    <label class="quiz-label"
-                      ><input type="radio" name="q2" value="True" checked />
-                      string</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q2" value="true" />
-                      boolean</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q2" value="True" /> object
-                    </label>
-                  </div>
-
-                  <div class="quiz-wrap-set">
-                    <p>
-                      3. Яке значення отримаємо провівши таку операцію "35"+
-                      "25"?
-                    </p>
-                    <label class="quiz-label"
-                      ><input type="radio" name="q3" value="true" checked />
-                      3525</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q3" value="True" /> 60</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q3" value="True" />
-                      Помилку</label
-                    >
-                  </div>
-                </fieldset>
-              </form>
-            </div>
+            </button> -->
             <button
-              type="submit"
-              onclick="submitQuiz('quizForm')"
-              class="main-button check-button"
+              type="button"
+              class="main-button"
+              onclick="showSection( 'section-2')"
             >
-              Перевірити
-            </button>
-            <button type="button" class="main-button" id="first-butt">
               До наступного блоку
             </button>
           </div>
         </div>
       </section>
-      <section class="second-section" id="section-2">
-        <div class="container visually-hidden" id="second-section">
+      <section class="first-section visually-hidden" id="section-2">
+        <div class="conatainer" id="second-section">
           <div class="section-wrap">
-            <h2 class="section-header">Умовне розгалуження</h2>
-            <img src="./img/if-else.jpg" alt="if else operators" class="img" />
+            <h2 class="section-header">JavaScript при створенні вебсторінок</h2>
+            <h2 class="block-header">
+              Методика використання JavaScript при створенні вебсторінок
+            </h2>
+            <img src="./img/execution.png" alt="types of data" class="img" />
             <p>
-              <b>Умови</b> <br />
-              Це конструкції в коді, які дозволяють перевірити, чи є вираз
-              істинним чи хибним, і виконати інший код залежно від отриманого
-              результату. Найбільш розповсюдженою формою умови є конструкція if
-              ... else.
+              Використання JavaScript при створенні вебсторінок - це невід'ємна
+              складова сучасної веброзробки, яка дозволяє зробити сторінки більш
+              динамічними, інтерактивними та функціональними. Ось методика
+              використання JavaScript при створенні вебсторінок:
             </p>
-
-            <p class="code">
-              var iceCream = "chocolate"; <br />
-              if (iceCream === "chocolate") {<br />
-              alert("Yay, I love chocolate ice cream!");<br />
-              } else {<br />
-              alert("Awwww, but chocolate is my favorite...");<br />
-              }
-            </p>
-            <p>
-              Вираз всередині if ( ... ) — це перевірка, яка використовує
-              оператор строгого рівності (як описано вище), щоб порівняти змінну
-              iceCream із рядком "chocolate" і перевірити, чи вони ідентичні.
-              Якщо це порівняння повертає true, виконується перший блок коду. В
-              іншому випадку цей код пропускається, і виконується другий блок
-              коду після інструкції else.
-            </p>
-            <p>
-              Якщо вираз всередині if буде дорівнювати нулю або одиниці, то цей
-              блок не буде виконуватись ніколи, або ж навпки буде робити це
-              завжди
-            </p>
-            <p class="code">
-              if (0) { // 0 is falsy <br />
-              ... <br />
-              }
-            </p>
-            <p class="code">
-              if (1) { // 1 is truthy <br />
-              ... <br />
-              } <br />
-            </p>
-            <h2 class="block-header">Блок "else"</h2>
-            <p>
-              Інструкція if може містити необов'язковий блок "else" (інакше).
-              Цей блок виконується, коли умова if є хибною (false).
-            </p>
-            <p class="code">
-              if (age > 18) {<br />
-              accessAllowed = true;<br />
-              } else {<br />
-              accessAllowed = false;<br />
-              }
-            </p>
-            <p>
-              Деколи важливо перевірити кілька варіантів умови. Для цього
-              використовується блок else if.
-            </p>
-            <p class="code">
-              var score = 75;<br />
-              <br />
-              if (score >= 90) {<br />
-              console.log("Відмінно"); <br />
-              } else if (score >= 70) {<br />
-              console.log("Добре");<br />
-              } else if (score >= 50) {<br />
-              console.log("Задовільно");<br />
-              } else {<br />
-              console.log("Незадовільно");<br />
-              }
-            </p>
-            <div class="quiz-wrap" id="test_1"></div>
-            <button id="button1" class="main-button check-button">
-              Перевірити
-            </button>
-            <h2 class="block-header">Цикли</h2>
-            <p>
-              У JavaScript існують різні види циклів, такі як for, while, і
-              do...while, які дозволяють вам виконувати блок коду кілька разів.
-              Цикли зручні, якщо ви хочете запускати один і той самий код знову
-              і знову, кожен раз з іншим значенням.
-            </p>
-            <img src="./img/loops.jpg" alt="loops" class="img" />
-            <p>
-              <b>Цикл «while»</b><br />У цьому циклі, блок коду буде
-              виконуватися, доки умова залишається істинною. У разі, якщо умова
-              вже на початку не є істинною, блок коду не виконається жодного
-              разу. <br />Цикл while має наступний синтаксис:
-            </p>
-            <p class="code">
-              while (condition) { <br />
-              // код <br />
-              }
-            </p>
-            <p>
-              Код з тіла циклу виконується, поки умова condition є істинною.
-            </p>
-            <p class="code">
-              let i = 0; <br />
-              while (i &lt; 3) { // выводит 0, затем 1, затем 2 <br />
-              alert( i ); <br />
-              i++; <br />
-              }
-            </p>
-            <p>
-              Один виклик тіла циклу у наукових термінах називається ітерацією.
-              У цьому циклі, зазначеному вище, здійснюється три ітерації. <br />
-
-              Якщо б рядок i++ був відсутній у вищенаведеному прикладі, то цей
-              цикл, в теорії, виконувався б безкінечно. На практиці, звісно,
-              браузер не дозволить цьому відбутися і надасть користувачеві
-              можливість зупинити «завислий» скрипт, а JavaScript на сервері
-              доведеться припинити процес. <br />
-
-              Будь-який вираз чи змінна може бути умовою циклу, не лише
-              порівняння: умова циклу while обчислюється і перетворюється в
-              логічне значення.
-            </p>
-            <p>
-              <b>Цикл "do...while"</b><br />
-              Перевірку умови можна розмістити під тілом циклу, використовуючи
-              спеціальний синтаксис do...while:
-            </p>
-            <p class="code">
-              do { <br />
-              // тіло цикла <br />
-              } while (condition);
-            </p>
-            <p>
-              Цикл спочатку виконає тіло, а потім перевірить умову condition, і
-              доки її значення рівне true, він буде виконуватись знову і знову.
-              <br />
-              Наприклад:
-            </p>
-            <p class="code">
-              let i = 0; <br />
-              do {<br />
-              alert( i ); <br />
-              i++; <br />
-              } while (i &lt; 3);
-            </p>
-            <p>
-              Такий синтаксис виправданий, якщо ви хочете, щоб тіло циклу
-              виконалося хоча б один раз, навіть якщо умова виявиться хибною. На
-              практиці, частіше використовується форма з передумовою: while
-              (...) { ... }.
-            </p>
-            <p>
-              <b>Цикл "for"</b><br />Більш складний, але при цьому
-              найпоширеніший цикл - це цикл `for`. Виглядає він наступним чином:
-            </p>
-            <p class="code">
-              for (початок; умова; крок) { <br />
-              // ... тіло циклу ... <br />
-              }
-            </p>
-            <p>
-              Давайте проаналізуємо кожну частину на прикладі. У цьому циклі
-              викликається alert(i) для i від 0 до (не включаючи) 3:
-            </p>
-            <p class="code">
-              for (let i = 0; i &lt; 3; i++) { <br />
-              alert(i); <br />
-              }
-            </p>
-            <p>Всього ми розглянули 3 типи циклів:</p>
-            <ul>
-              <li>while: Перевіряє умову перед кожною ітерацією.</li>
-              <li>do..while: Перевіряє умову після кожної ітерації.</li>
+            <ol>
               <li>
-                for: Перевіряє умову перед кожною ітерацією і надає можливість
-                задати додаткові налаштування.
+                <p>
+                  <b>Доступ до DOM (Document Object Model):</b><br />
+                  JavaScript дозволяє отримати доступ до елементів та структури
+                  вебсторінки через DOM. Ви можете звертатися до елементів,
+                  змінювати їх властивості, додавати або видаляти елементи,
+                  реагувати на події та багато іншого.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Взаємодія з користувачем:</b><br />
+                  JavaScript дозволяє створювати інтерактивні елементи та
+                  функціонал на сторінці. Наприклад, ви можете додавати
+                  обробники подій, такі як клік чи наведення миші, для взаємодії
+                  з користувачем.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Асинхронні запити на сервер:</b><br />
+                  JavaScript може використовуватися для виконання асинхронних
+                  запитів на сервер за допомогою технологій, таких як AJAX
+                  (Asynchronous JavaScript and XML) або Fetch API. Це дозволяє
+                  оновлювати вміст сторінки без перезавантаження, взаємодіючи з
+                  сервером у фоновому режимі.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Анімація та ефекти:</b><br />
+                  JavaScript може використовуватися для створення анімацій,
+                  переходів та інших візуальних ефектів на сторінці. Ви можете
+                  керувати анімаціями за допомогою CSS або програмно змінювати
+                  стилі елементів для створення різних візуальних ефектів.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Робота з формами:</b><br />
+                  JavaScript дозволяє виконувати перевірку даних, обробляти
+                  введення користувача та взаємодіяти з формами на сторінці. Ви
+                  можете валідувати введені дані, додавати автозаповнення,
+                  валідувати поля та відправляти дані на сервер.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Використання сторонніх бібліотек і фреймворків:</b><br />
+                  JavaScript має широкий вибір сторонніх бібліотек і
+                  фреймворків, таких як React, Angular, Vue.js та інші. Вони
+                  надають додаткові функції та інструменти для швидкої і
+                  ефективної розробки вебдодатків.
+                </p>
+              </li>
+            </ol>
+            <p>
+              Отже, JavaScript використовується для створення різноманітних
+              функцій та ефектів, які додають інтерактивність і привабливість до
+              вебсторінок, забезпечуючи кращий користувацький досвід.
+            </p>
+            <h2 class="block-header">Перевірка знань</h2>
+            <div class="quiz-wrap" id="test1_2"></div>
+
+            <div class="twoButtonsWrap">
+              <button id="button1_2" class="main-button check-button">
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test1_2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <h2 class="block-header">
+              Технологія застосування Java-скриптів на вебсторінках
+            </h2>
+
+            <p>Існують три основних методи підключення JavaScript до HTML:</p>
+            <ol>
+              <li>
+                <p>
+                  <strong>Вбудований (Inline):</strong><br />
+                  JavaScript-код вставляється безпосередньо в HTML-документ між
+                  тегами &lt;script&gt; та &lt;/script&gt;. Наприклад:
+                </p>
+                <p class="code">
+                  &lt;script&gt; <br />// JavaScript код тут<br />
+                  &lt;/script&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Зовнішній файл (External):</strong><br />
+                  JavaScript-код розміщується у окремому файлі з розширенням
+                  .js, а потім цей файл підключається до HTML-документа за
+                  допомогою атрибута src тега &lt;script&gt;. Наприклад:
+                </p>
+
+                <p class="code">
+                  &lt;script src="script.js"&gt;&lt;/script&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Атрибут onclick, onload тощо:</strong><br />
+                  JavaScript-код може бути викликаний з атрибутів
+                  HTML-елементів, таких як onclick, onload, onmouseover, тощо.
+                  Наприклад:
+                </p>
+
+                <p class="code">
+                  &lt;button onclick="myFunction()"&gt;Натисни
+                  мене&lt;/button&gt;
+                </p>
+              </li>
+            </ol>
+            <p>
+              Зазвичай JavaScript підключається як окремий файл, або декілька
+              окремиї файлів. Це зроблено для зручності та прийнято стандартами
+              програмістів.
+            </p>
+            <img
+              src="./img/script.jpg"
+              alt="javascript operators"
+              class="img"
+            />
+            <p>
+              Крім зручності та відповідності стандартам програмістів,
+              підключення JavaScript як окремих файлів дозволяє зберігати код у
+              більш організованому та систематизованому вигляді. Це сприяє
+              підтримці та розвитку проектів на протязі тривалого часу, спрощує
+              роботу над ними для багатьох розробників та полегшує спільне
+              використання коду між різними частинами проекту або навіть між
+              різними проектами. Такий підхід також підвищує стійкість проекту
+              до помилок та полегшує процес відлагодження та підтримки.
+            </p>
+            <h2 class="block-header">
+              Створення контенту сторінок з використанням Java-скриптів
+            </h2>
+            <p>
+              JavaScript надає багато можливостей для динамічного створення
+              контенту на сторінці. Ось деякі способи, якими ви можете
+              використовувати JavaScript для створення контенту:
+            </p>
+            <ul>
+              <li>
+                <p>
+                  <strong>DOM Маніпуляція:</strong> Ви можете створювати,
+                  змінювати або видаляти HTML-елементи за допомогою JavaScript.
+                  Це досягається шляхом отримання доступу до DOM (Document
+                  Object Model) елементів і використання методів, таких як
+                  createElement, appendChild, innerHTML тощо.
+                </p>
+
+                <p class="code">
+                  // Створення нового елементу <br />&lt;div&gt; let newDiv =
+                  document.createElement("div"); <br />// Додавання текстового
+                  вмісту newDiv.innerHTML = "Новий контент";<br />
+                  // Додавання елементу до існуючого елементу з
+                  id="container"<br />
+                  document.getElementById("container").appendChild(newDiv);
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <strong>AJAX (Asynchronous JavaScript and XML):</strong> Ви
+                  можете використовувати AJAX для отримання даних з сервера без
+                  перезавантаження сторінки. Отримані дані можна використовувати
+                  для створення або оновлення контенту на сторінці.
+                </p>
+
+                <p class="code">
+                  // Використання AJAX для отримання даних з сервера<br />
+                  let xhr = new XMLHttpRequest();<br />
+                  xhr.open("GET", "data.json", true);<br />
+                  xhr.onload = function() { <br />if (xhr.status == 200) {<br />
+                  // Обробка отриманих даних<br />
+                  let data = JSON.parse(xhr.responseText);<br />
+                  // Вставка даних на сторінку<br />
+                  document.getElementById("dataContainer").innerHTML =
+                  data.content;<br />
+                  } <br />};<br />
+                  xhr.send();
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Шаблонізація (Template Engines):</strong> Ви можете
+                  використовувати бібліотеки або фреймворки шаблонізації, такі
+                  як Handlebars, Mustache, або шаблонізатори в Angular або
+                  React, для створення шаблонів HTML, які можна заповнити
+                  динамічними даними.
+                </p>
+                <p>Наприклад з використанням Handlebars:</p>
+
+                <p class="code">
+                  // Компіляція шаблону<br />
+                  let template = Handlebars.compile("&lt;p&gt;{{name}} є
+                  {{role}}&lt;/p&gt;");<br />
+                  // Дані для заповнення шаблону<br />
+                  let context = { name: "John", role: "розробник" };<br />
+                  // Вставка заповненого шаблону на сторінку<br />
+                  document.getElementById("templateContainer").innerHTML =
+                  template(context);
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Генерація HTML:</strong> Ви можете генерувати HTML-код
+                  за допомогою JavaScript, який потім можна вставити на
+                  сторінку.
+                </p>
+
+                <p class="code">
+                  // Генерація списку<br />
+                  let listHTML = "&lt;ul&gt;";<br />
+                  for (let i = 1; i &lt;= 5; i++)<br />
+                  {<br />
+                  listHTML += "&lt;li&gt;Елемент " + i + "&lt;/li&gt;";<br />
+                  }<br />
+                  listHTML += "&lt;/ul&gt;"; <br />// Вставка HTML на
+                  сторінку<br />
+                  document.getElementById("listContainer").insertAdjacentHTML('beforeend',
+                  listHTML);
+                </p>
+                <p>
+                  Функція insertAdjacentHTML має чотири режими вставки, кожен з
+                  яких визначає місце вставки відносно обраного елемента.
+                  Значення "beforebegin" вставляє HTML перед обраним елементом,
+                  "afterbegin" вставляє HTML всередину обраного елемента перед
+                  всіма його дочірніми елементами, "beforeend" вставляє HTML в
+                  кінець обраного елемента, після всіх його дочірніх елементів,
+                  а "afterend" вставляє HTML після обраного елемента.
+                </p>
+                <img
+                  src="./img/insert-adjacent.jpg"
+                  alt="skin and skeleton"
+                  class="img"
+                />
               </li>
             </ul>
-            <div class="test-wrap">
-              <form class="quiz-form" id="quizForm1">
-                <fieldset class="quiz-fieldset">
-                  <div class="quiz-wrap-set">
-                    <p>
-                      1. Скільки разів виконається блок коду в циклі do...while,
-                      якщо умова false?
-                    </p>
-                    <label class="quiz-label"
-                      ><input type="radio" name="q1" value="True" checked />
-                      0</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q1" value="true" /> 1</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q1" value="True" /> 2</label
-                    >
-                  </div>
+            <h2 class="block-header">Перевірка знань</h2>
+            <form class="quiz-form" id="quizForm1_2">
+              <fieldset class="quiz-fieldset" id="fieldset1_2">
+                <div class="quiz-wrap-set">
+                  <p>1. Який метод підключення JavaScript до HTML існує?</p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" checked /> а)
+                    filed
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="true" /> б) External
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" /> в) Embedded
+                  </label>
+                </div>
 
-                  <div class="quiz-wrap-set">
-                    <p>2. Один виклик тіла циклу називається?</p>
-                    <label class="quiz-label"
-                      ><input type="radio" name="q2" value="true" checked />
-                      Конкантинація</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q2" value="True" />
-                      Ітерація</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q2" value="True" /> Імплікація
-                    </label>
-                  </div>
+                <div class="quiz-wrap-set">
+                  <p>2. Яким чином можна використовувати AJAX у JavaScript?</p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="True" checked /> а) Для
+                    створення інтерактивних елементів
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="True" /> б) Для
+                    асинхронних запитів на сервер
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="true" /> в) Для
+                    валідації форм
+                  </label>
+                </div>
 
-                  <div class="quiz-wrap-set">
-                    <p>
-                      3. Який тип циклу перевіряє умову перед кожною ітерацією і
-                      дозволяє встановлювати додаткові параметри?
-                    </p>
-                    <label class="quiz-label"
-                      ><input type="radio" name="q3" value="true" checked />
-                      for</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q3" value="True" /> Сполучені
-                      while</label
-                    >
-                    <label class="quiz-label"
-                      ><input type="radio" name="q3" value="True" />
-                      do..while</label
-                    >
-                  </div>
-                </fieldset>
-              </form>
-            </div>
-            <button
-              type="button"
-              onclick="submitQuiz('quizForm1')"
-              class="main-button check-button"
-            >
-              Перевірити
-            </button>
-            <button type="button" class="main-button" id="module-butt">
-              Почати модульний контроль
-            </button>
-          </div>
-        </div>
-      </section>
-      <section class="last-section visually-hidden" id="section-3">
-        <div class="container">
-          <h2 class="section-header">Модульний контроль</h2>
-          <div class="test-wrap">
-            <form class="quiz-form" id="quizForm2">
-              <fieldset class="quiz-fieldset">
-                <div class="quiz-wrap" id="test_module"></div>
+                <div class="quiz-wrap-set">
+                  <p>
+                    3. Які переваги має зберігання JavaScript-коду в окремих
+                    файлах?
+                  </p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" checked /> а)
+                    Збільшення продуктивності
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="true" /> б) Підвищення
+                    організації та підтримки коду
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" /> в) Збільшення
+                    складності програмування
+                  </label>
+                </div>
               </fieldset>
             </form>
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm1_2')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset1_2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+            <h2 class="block-header">Перевірка навичок</h2>
+            <p>Виконайте наступні вказівки в полі нижче:</p>
+            <ol>
+              <li>
+                Створіть контейнер: Додайте в поле контейнер, який буде
+                вміщувати всі інші елементи. Додайте йому клас "container".
+              </li>
+              <li>
+                Додайте заголовок:Напишіть "Ласкаво просимо на мою вебсторінку"
+                всередині цих тегів, та додайте клас "title"
+              </li>
+              <li>
+                Додайте параграф: Створіть параграф та додайте власний текст в
+                нього, наприклад ваше ім'я.
+              </li>
+              <li>
+                Додайте список: Додайте невпорядкований список та впишіть три
+                елементи списку між відповідними тегами, додайте в кожен елемент
+                власний текст.
+              </li>
+              <li>
+                Додайте кнопку: Додайте кнопку з класом "button". Напишіть
+                "Наведіть на мене" всередині відповідних тегів.
+              </li>
+            </ol>
+
+            <textarea
+              id="codeInput"
+              class="codeInput"
+              rows="10"
+              cols="50"
+            ></textarea
+            ><br />
+            <button onclick="openCode()" class="user-button">
+              Відкрити код
+            </button>
+            <p>
+              Якщо виконали завдання правильно то отримаєте сторінку схожу на
+              цю:
+            </p>
+            <img src="./img/ui.jpg" alt="" class="img" />
+            <a href="./chapter2.html" class="main-link">До наступної теми</a>
           </div>
-          <button
-            type="button"
-            onclick="submitModuleQuiz('quizForm2', 'questions3')"
-            class="main-button check-button"
-            id="module-check"
-          >
-            Перевірити
-          </button>
         </div>
       </section>
     </main>
-    <div class="backdrop" id="modal-section">
-      <div class="modal">
-        <button type="button" class="modal-btn" id="close-modal">
-          <svg class="modal-btn-icon" width="8" height="8">
-            <use href="./img/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-        <p class="modal-text">Вітаю ти завершив тест!</p>
-        <p id="score" class="score">Оцінка:12 з 29</p>
-        <button
-          type="button"
-          class="main-button restart-btn"
-          onclick="reload()"
-        >
-          Почати спочатку
-        </button>
-      </div>
-    </div>
 
-    <script src="./js/js.js" type="module"></script>
+    <script src="./js/chapter1.js" type="module"></script>
   </body>
 </html>

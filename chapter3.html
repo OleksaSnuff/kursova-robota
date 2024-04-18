@@ -29,12 +29,12 @@
         <nav class="header-navigation">
           <ul class="header-navigation-list">
             <li class="header-navigation-list-item">
-              <a href="./chapter1.html" class="header-navigation-link"
-                >Тема 1</a
-              >
+              <a href="./index.html" class="header-navigation-link">Тема 1</a>
             </li>
             <li class="header-navigation-list-item">
-              <a href="./index.html" class="header-navigation-link">Тема 2</a>
+              <a href="./chapter2.html" class="header-navigation-link"
+                >Тема 2</a
+              >
             </li>
             <li class="header-navigation-list-item">
               <a href="" class="header-navigation-link">Тема 3</a>
@@ -48,21 +48,33 @@
         <div class="zero-chapter-wrap conatainer">
           <div class="section-wrap">
             <h1 class="chapter-header">Тема 3. Введення у бібліотекy jQuery</h1>
-            <p>
-              В цій темі ми будемо розглядати:<br />
-              Загальна характеристика бібліотеки jQuery.<br />
-              Підключення та активація бібліотеки.<br />
-              Синтаксис jQuery. Селектори. Обробка подій.<br />
-              Функції та властивості подій. Спеціальні ефекти.
-            </p>
+            <p>У цій темі ми будемо розглядати:<br /></p>
+            <ol class="theme-list">
+              <li>
+                <p>Загальна характеристика бібліотеки jQuery<br /></p>
+              </li>
+              <li>
+                <p>Підключення та активація бібліотеки<br /></p>
+              </li>
+              <li>
+                <p>Синтаксис jQuery. Селектори. Обробка подій<br /></p>
+              </li>
+              <li>
+                <p>Функції та властивості подій. Спеціальні ефекти</p>
+              </li>
+            </ol>
           </div>
-          <button type="button" class="main-button" id="zero-butt">
+          <button
+            type="button"
+            class="main-button"
+            onclick="showSection('section-1')"
+          >
             Починаймо!
           </button>
         </div>
       </section>
-      <section class="first-section" id="section-1">
-        <div class="conatainer visually-hidden" id="first-section">
+      <section class="first-section visually-hidden" id="section-1">
+        <div class="conatainer" id="first-section">
           <div class="section-wrap">
             <h2 class="section-header">
               Загальні відомості про бібліотеку jQuery
@@ -72,12 +84,12 @@
             </h2>
             <p>
               Історія виникнення бібліотеки jQuery є цікавою та важливою для
-              розуміння контексту розвитку веб-розробки.
+              розуміння контексту розвитку веброзробки.
             </p>
             <img src="./img/jquery.jpg" alt="" class="img" />
             <p>
               Бібліотека jQuery була розроблена Джоном Резігом у 2006 році. На
-              той час веб-розробка потребувала великих зусиль для досягнення
+              той час веброзробка потребувала великих зусиль для досягнення
               певних результатів через різницю у реалізації функціоналу у різних
               браузерах.
             </p>
@@ -89,9 +101,9 @@
             </p>
             <p>
               Перша версія jQuery була випущена у січні 2006 року, і вона
-              миттєво здобула популярність серед веб-розробників через свою
+              миттєво здобула популярність серед веброзробників через свою
               ефективність та простоту використання. З тих пір вона стала
-              стандартом в індустрії веб-розробки.<br />
+              стандартом в індустрії веброзробки.<br />
               Протягом наступних років jQuery активно розвивалася. Випускалися
               нові версії, у яких додавалися нові функції та виправлялися
               помилки. Також розробники створили велику кількість плагінів для
@@ -100,7 +112,7 @@
             <p>
               Сьогодні jQuery залишається одним із найпопулярніших інструментів
               для роботи з JavaScript. Вона використовується мільйонами
-              веб-сайтів по всьому світу, хоча з'явилися і альтернативні
+              вебсайтів по всьому світу, хоча з'явилися і альтернативні
               технології, такі як фреймворки JavaScript (наприклад, React,
               Angular, Vue.js), які надають інші підходи до розв'язання тих
               самих завдань.
@@ -110,29 +122,28 @@
               серпня 2023 року.
             </p>
             <img src="./img/npm-jq.jpg" alt="" class="img" />
-            <h2 class="block-header"></h2>
+
             <p>
               Дана бібліотека - це потужний і популярний інструмент у світі
-              веб-розробки, призначений для спрощення і зручності роботи з
+              веброзробки, призначений для спрощення і зручності роботи з
               JavaScript на стороні клієнта. Одним із головних принципів jQuery
               є забезпечення швидкості та легкості використання, що дозволяє
               розробникам швидше реалізовувати різноманітні функціональність та
-              взаємодію з DOM, подіями та анімацією на веб-сторінках.
+              взаємодію з DOM, подіями та анімацією на вебсторінках.
             </p>
             <p>
               Однією з ключових особливостей jQuery є його крос-браузерна
               сумісність, що означає, що функції, які викликаються в jQuery,
-              будуть працювати однаково на різних веб-переглядачах, незалежно
-              від їх версій. Це значно спрощує процес розробки, оскільки
-              розробникам не потрібно створювати власні рішення для кожного
-              браузера окремо.
+              будуть працювати однаково на різних вебпереглядачах, незалежно від
+              їх версій. Це значно спрощує процес розробки, оскільки розробникам
+              не потрібно створювати власні рішення для кожного браузера окремо.
             </p>
             <p>
               jQuery також відомий своєю простотою використання. Завдяки своїй
               зрозумілій синтаксичній структурі та коротким методам,
               використання jQuery значно скорочує кількість коду, необхідного
               для досягнення певного результату. Це особливо корисно для
-              початківців, які тільки починають вивчати веб-розробку.
+              початківців, які тільки починають вивчати веброзробку.
             </p>
             <img src="./img/jquery0.jpg" alt="skin and skeleton" class="img" />
             <p>
@@ -145,19 +156,28 @@
             </p>
             <p>
               У цілому, jQuery є надійним інструментом для швидкої та ефективної
-              веб-розробки, особливо для тих, хто тільки починає свій шлях у цій
+              веброзробки, особливо для тих, хто тільки починає свій шлях у цій
               сфері, завдяки своїй простоті використання та широкому спектру
               функціональності.
             </p>
 
-            <!-- <div id="test" class="quiz-wrap"></div>
-            <button type="submit" id="button" class="main-button check-button">
-              Перевірити
-            </button> -->
+            <div class="quiz-wrap" id="test3_1"></div>
 
-            <h2 class="block-header">Підключення та активація бібліотеки.</h2>
+            <div class="twoButtonsWrap">
+              <button id="button3_1" class="main-button check-button">
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test3_1')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <h2 class="block-header">Підключення та активація бібліотеки</h2>
             <p>
-              Підключення jQuery до веб-сторінки можна здійснити кількома
+              Підключення jQuery до вебсторінки можна здійснити кількома
               способами.Розглянемо їх всі:
             </p>
             <ol>
@@ -178,9 +198,9 @@
                   <b>Локальне підключення:</b><br />
                   Якщо ви вирішили завантажити файл jQuery та підключити його
                   локально, перш за все, завантажте файл jQuery з офіційного
-                  веб-сайту. Після завантаження скопіюйте файл jQuery
-                  (наприклад, jquery.min.js) у ваш проект. Потім вставте такий
-                  код всередині секції &lt;head&gt; вашого HTML-документа:
+                  вебсайту. Після завантаження скопіюйте файл jQuery (наприклад,
+                  jquery.min.js) у ваш проект. Потім вставте такий код всередині
+                  секції &lt;head&gt; вашого HTML-документа:
                 </p>
                 <p class="code">
                   &lt;script
@@ -212,11 +232,89 @@
             </ol>
             <p>
               Після виконання будь-якого з цих методів для підключення, jQuery
-              буде успішно підключена до вашої веб-сторінки і готова до
+              буде успішно підключена до вашої вебсторінки і готова до
               використання.
             </p>
+            <form class="quiz-form" id="quizForm3_1">
+              <fieldset class="quiz-fieldset" id="fieldset3_1">
+                <div class="quiz-wrap-set">
+                  <p>
+                    1. Яким способом можна підключити jQuery до вебсторінки?
+                  </p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="true" checked /> а) CDN
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" /> б) FTP
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" /> в) DNS
+                  </label>
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>2. Яка основна перевага використання jQuery?</p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="true" checked /> а)
+                    Простота використання
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" /> б) Висока
+                    продуктивність
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" /> в) Широкий
+                    вибір плагінів
+                  </label>
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>3. Як можна встановити jQuery за допомогою npm?</p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q4" value="true" checked /> а) npm
+                    install jquery
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q4" value="True" /> б) npm setup
+                    jquery
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q4" value="True" /> в) npm get
+                    jquery
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm3_1')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset3_1')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+            <button
+              type="button"
+              class="main-button"
+              onclick="showSection('section-2')"
+            >
+              До наступного блоку
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="first-section visually-hidden" id="section-2">
+        <div class="conatainer" id="first-section">
+          <div class="section-wrap">
             <h2 class="section-header">Основи синтаксису jQuery</h2>
-            <h2 class="block-header">Синтаксис jQuery. Селектори.</h2>
+            <h2 class="block-header">Синтаксис jQuery. Селектори</h2>
 
             <ul class="unordered-list">
               <li>
@@ -272,6 +370,21 @@
               </li>
             </ul>
             <img src="./img/jqcode.jpg" alt="" class="img" />
+
+            <div class="quiz-wrap" id="test3_2"></div>
+
+            <div class="twoButtonsWrap">
+              <button id="button3_2" class="main-button check-button">
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test3_2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
             <h2 class="block-header">Синтаксис jQuery. Обробка подій</h2>
             <p>
               Обробка подій є одним з основних аспектів роботи з jQuery. Вона
@@ -347,16 +460,99 @@
               Це лише декілька прикладів того, як ви можете обробляти події за
               допомогою jQuery. Ці методи дозволяють вам легко взаємодіяти з
               користувачем та реалізовувати різноманітні функціональність на
-              веб-сторінці.
+              вебсторінці.
             </p>
+            <form class="quiz-form" id="quizForm3_2">
+              <fieldset class="quiz-fieldset" id="fieldset3_2">
+                <div class="quiz-wrap-set">
+                  <p>1. Як вибрати перший елемент за його тегом?</p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="true" checked /> а)
+                    $('div:first')
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" /> б)
+                    $('div:last')
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" /> в)
+                    $('div:nth-child(1)')
+                  </label>
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>
+                    2. Як можна виконати дії при кліку на певний елемент в
+                    jQuery?
+                  </p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="True" checked /> а)
+                    .hover()
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="true" /> б) .click()
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="True" /> в) .submit()
+                  </label>
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>
+                    3. Як можна обробити подію введення тексту в полі введення
+                    за допомогою jQuery?
+                  </p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="true" checked /> а)
+                    .keyup()
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" /> б) .change()
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" /> в) .submit()
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm3_2')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset3_2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="main-button"
+              onclick="showSection('section-3')"
+            >
+              До наступного блоку
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="first-section visually-hidden" id="section-3">
+        <div class="conatainer" id="first-section">
+          <div class="section-wrap">
             <h2 class="section-header">
               Події: Функції, Властивості, та Ефекти
             </h2>
-            <h2 class="block-header">Функції та властивості подій.</h2>
+            <h2 class="block-header">Функції та властивості подій</h2>
             <p>
               У jQuery події представлені функціями та властивостями, які можна
               використовувати для обробки різноманітних дій користувача на
-              веб-сторінці. Ось декілька основних функцій та властивостей подій:
+              вебсторінці. Ось декілька основних функцій та властивостей подій:
             </p>
             <img src="./img/separator.jpeg" alt="" class="img" />
             <ol>
@@ -485,11 +681,26 @@
               потрібно працювати з багатьма подіями, коли елементи додаються
               динамічно або коли вам потрібно делегувати обробку подій.
             </p>
+
+            <div class="quiz-wrap" id="test3_3"></div>
+
+            <div class="twoButtonsWrap">
+              <button id="button3_3" class="main-button check-button">
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test3_3')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
             <h2 class="block-header">Спеціальні ефекти</h2>
             <p>
               В jQuery існує багато вбудованих функцій для створення анімацій та
               спецефектів, що дозволяють створювати візуальні ефекти на
-              веб-сторінці. Ось декілька з них:
+              вебсторінці. Ось декілька з них:
             </p>
 
             <ul>
@@ -588,14 +799,134 @@
               >
             </p>
             <img src="./img/easy.jpg" alt="" class="img" />
+            <form class="quiz-form" id="quizForm3_3">
+              <fieldset class="quiz-fieldset" id="fieldset3_3">
+                <div class="quiz-wrap-set">
+                  <p>
+                    1. Яка функція використовується для створення анімаційних
+                    ефектів, таких як переміщення, зміна розміру, зміна
+                    прозорості тощо?
+                  </p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="true" checked /> а)
+                    .animate()
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" /> б) .hide()
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" /> в) .fadeIn()
+                  </label>
+                </div>
 
-            <button type="button" class="main-button" id="first-butt">
-              До наступного блоку
+                <div class="quiz-wrap-set">
+                  <p>
+                    2. Які методи використовуються для створення анімаційних
+                    ефектів?
+                  </p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="True" checked /> а)
+                    .hide(), .show(), .toggle()
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="true" /> б) .animate(),
+                    .fadeIn(), .fadeOut()
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="True" /> в)
+                    .slideDown(), .slideUp(), .slideToggle()
+                  </label>
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>
+                    3. Як називається параметр методу .animate(), що дозволяє
+                    контролювати швидкість зміни значень властивостей елементів
+                    під час анімації?
+                  </p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" checked /> а)
+                    easing
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="true" /> б) duration
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" /> в) speed
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm3_3')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset3_3')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+            <button type="button" class="main-button" id="module-butt">
+              Почати модульний контроль
             </button>
           </div>
         </div>
       </section>
+
+      <section class="last-section visually-hidden" id="section-4">
+        <div class="container">
+          <h2 class="section-header">Модульний контроль</h2>
+          <div class="test-wrap">
+            <form class="quiz-form" id="quizForm2">
+              <fieldset class="modal-quiz-fieldset">
+                <div class="modal-quiz-wrap" id="test_module"></div>
+              </fieldset>
+            </form>
+
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitModuleQuiz('quizForm2', 'questions3')"
+                class="main-button check-button"
+                id="module-check"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="highlightCorrectAnswers('quizForm2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="./js/js.js" type="module"></script>
+    <div class="backdrop" id="modal-section">
+      <div class="modal">
+        <button type="button" class="modal-btn" id="close-modal">
+          <svg class="modal-btn-icon" width="8" height="8">
+            <use href="./img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-text">Вітаю ти завершив тест!</p>
+        <p id="score" class="score">Оцінка:0 з 29</p>
+        <button
+          type="button"
+          class="main-button restart-btn"
+          onclick="reload()"
+        >
+          Почати спочатку
+        </button>
+      </div>
+    </div>
+    <script src="./js/chapter3.js" type="module"></script>
   </body>
 </html>
